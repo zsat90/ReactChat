@@ -6,13 +6,13 @@ export const useFetchRecipientUser = (chat, user) => {
   const [recipientUser, setRecipientUser] = useState(null);
   const [error, setError] = useState(null);
 
-  const recpientId = chat?.members.find((id) => id != user?._id);
+  const recipientId = chat?.members.find((id) => id != user?._id);
 
   useEffect(() => {
     const getUser = async () => {
-      if (!recpientId) return null;
+      if (!recipientId) return null;
 
-      const response = await getRequest(`${baseUrl}/users/find/${recpientId}`);
+      const response = await getRequest(`${baseUrl}/users/find/${recipientId}`);
 
       if (response.error) {
         return setError(response);
@@ -22,7 +22,7 @@ export const useFetchRecipientUser = (chat, user) => {
     };
 
     getUser();
-  }, []);
+  }, [recipientId]);
 
   return { recipientUser };
 };
