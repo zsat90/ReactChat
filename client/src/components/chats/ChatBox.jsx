@@ -12,13 +12,16 @@ const ChatBox = () => {
     const {recipientUser} = useFetchRecipientUser(currentChat, user)
     const [textMessage, setTextMessage] = useState("")
 
+ 
 
-    if(!recipientUser) return(
+    if(!recipientUser) 
+    return(
         <p style={{textAlign: "center", width: "100%"}}>
             No Converstion selected yet...
         </p>
     )
-    if(!isMessagesLoading) return(
+    if(isMessagesLoading) 
+    return(
         <p style={{textAlign: "center", width: "100%"}}>
             Loading Chat...
         </p>
@@ -32,10 +35,11 @@ const ChatBox = () => {
         </div>
 
         <Stack gap={3} className="messages">
-            {messages && messages.map((message, index) => <Stack key={index} className={`${message?.senderId === user?._id ? "message self align-self-end flex-grow-0" : "message align-self-start flex-grow-0"}`}> 
+            {messages && messages.map((message, index) => (<Stack key={index} className={`${message?.senderId === user?._id ? "message self align-self-end flex-grow-0" : "message align-self-start flex-grow-0"}`}> 
                 <span>{message.text}</span>
                 <span className="message-footer">{moment(message.createdAt).calendar()}</span>
-            </Stack>)}
+            </Stack>
+            ))}
         </Stack>
 
         <Stack direction="horizontal" gap={3} className="chat-input flex-grow-0">

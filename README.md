@@ -8,31 +8,34 @@ To start a test server on your computer, navigate to the project directory in yo
 
 The purpose of this software is to delve into the intricacies of real-time web communication and to understand the challenges and solutions in creating a seamless, user-friendly chat interface. It stands as a testament to my commitment to learning and my passion for tackling complex problems through code.
 
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running (starting the server and navigating through the web pages) and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/tF0gxqnRsTk)
 
 # Web Pages
 
-{Describe each of the web pages you created and how the web app transitions between each of them. Also describe what is dynamically created on each page.}
+- Register Page: A page for a user to register so they will be able to login to chat.
+- Login Page: The entry point of the app where users can sign in to join the chat.
+- Chat Page: After logging in, users are directed to select a person to chat with or send a message to someone new.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+The development of this software was facilitated by the following tools and technologies:
 
-{Describe the programming language that you used and any libraries.}
+- Node.js and Express: Used for setting up the backend server, managing connections, and handling real-time communication.
+- React: Empowered the frontend development, creating a dynamic and responsive user interface.
+- Socket.IO: This library was instrumental in enabling real-time, bi-directional communication between web clients and servers.
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+- [Express JS](https://expressjs.com/)
+- [React JS](https://react.dev/)
+- [Socket IO](https://socket.io/docs/v4/)
+- [React Context API](https://www.freecodecamp.org/news/context-api-in-react/)
+- [React Bootstrap](https://react-bootstrap.netlify.app/docs/getting-started/introduction/)
+- [MongoDB](https://www.mongodb.com/)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-
-- Item 1
-- Item 2
-- Item 3
+- Notifications: Add notifications when a user recieves a message.
+- Enhanced Authentication: Implementing a more robust authentication mechanism for increased security.
+- Message Encryption: Ensuring that messages are encrypted end-to-end to protect user privacy.
+- UI/UX Enhancements: Continuously refining the user interface and experience to make the app more engaging and easier to use.

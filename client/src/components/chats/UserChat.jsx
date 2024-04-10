@@ -22,9 +22,9 @@ const UserChat = ({chat, user}) => {
             </div>
             <div className="d-flex flex-column align-items-end">
                 <div className="date">
-
+                    
                 </div>
-                {/* <div className="this-user-notification"></div> */}
+                <div className="this-user-notification"></div>
                 <span className={isOnline ? "user-online" : ""}></span>
             </div>
         </Stack> 

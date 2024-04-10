@@ -15,13 +15,15 @@ export const ChatContextProvider = ({children, user}) => {
     const [userChatError, setUserChatError] = useState(null);
     const [potentialChats, setPotentialChats] = useState([]);
     const [currentChat, setCurrentChat] = useState(null)
-    const [messages, setMessages] = useState(null);
+    const [messages, setMessages] = useState([]);
     const [isMessagesLoading, setIsMessagesLoading] = useState(false)
     const [messagesError, setMessagesError] = useState(null)
     const [sendTextMessageError, setSendTextMessageError] = useState(null)
     const [newMessage, setNewMessage] = useState(null)
     const [socket, setSocket] = useState(null)
     const [onlineUsers, setOnlineUsers] = useState([])
+ 
+
 
     // init socket
     useEffect(() => {
@@ -132,8 +134,6 @@ export const ChatContextProvider = ({children, user}) => {
 
     useEffect(() => {
         const getMessages = async() => {
-                
-
                 setIsMessagesLoading(true)
                 setMessagesError(null)
 
@@ -147,9 +147,9 @@ export const ChatContextProvider = ({children, user}) => {
 
                 setMessages(response)
             
-        }
+            };
 
-        getMessages()
+        getMessages();
     }, [currentChat])
 
     const sendTextMessage = useCallback(async(textMessage, sender, currentChatId, setTextMessage) => {
@@ -206,7 +206,8 @@ export const ChatContextProvider = ({children, user}) => {
         isMessagesLoading,
         messagesError,
         sendTextMessage,
-        onlineUsers
+        onlineUsers,
+        currentChat
     }}>
         {children}
     </ChatContext.Provider>
