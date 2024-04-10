@@ -4,7 +4,7 @@
 
 As a software engineer dedicated to constant growth and learning, this project is a cornerstone in my journey of mastering full-stack development. I developed a web-based chat application leveraging the power of Node.js, Express, and React. This application serves as a practical exploration into building real-time communication tools, which are essential in today's connected world.
 
-To start a test server on your computer, navigate to the project directory in your terminal and run nodemon. This command launches the backend server. For the frontend, open another terminal window, navigate to the client directory, and again run npm run dev. The React development server will start, and you can view the first page of the app.
+To start a test server on your computer, navigate to the project directory in your terminal and run nodemon. This command launches the backend server. Then in the socket folder run nodemon as well to start up the socket io server. For the frontend, open another terminal window, navigate to the client directory, and again run npm run dev. The React development server will start, and you can view the first page of the app.
 
 The purpose of this software is to delve into the intricacies of real-time web communication and to understand the challenges and solutions in creating a seamless, user-friendly chat interface. It stands as a testament to my commitment to learning and my passion for tackling complex problems through code.
 
